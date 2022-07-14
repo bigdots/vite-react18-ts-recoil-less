@@ -2,6 +2,7 @@ import React from 'react'
 
 import { useRecoilState, useRecoilValue } from 'recoil'
 import { countState, doubleCountState } from '../../store/demo'
+import $http from '../../api/demo'
 
 import styled from 'styled-components'
 const Button = styled.button`
@@ -17,6 +18,8 @@ export function Demo() {
     setCount(count + 1)
   }
 
+  const handleRequest = () => {}
+
   return (
     <div>
       <h3>demo页面</h3>
@@ -24,6 +27,10 @@ export function Demo() {
       <h3>数字翻倍：{doublecount}</h3>
       <div>
         <Button>styled-component使用示例</Button>
+      </div>
+
+      <div>
+        <Button onClick={$http.musicRankingsDetails}>请求接口</Button>
       </div>
     </div>
   )

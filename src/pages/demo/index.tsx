@@ -2,7 +2,7 @@ import React from 'react'
 
 import { useRecoilState, useRecoilValue } from 'recoil'
 import { countState, doubleCountState } from '../../store/demo'
-import $http from '../../api/demo'
+import $http from '@/api/demo'
 
 import styled from 'styled-components'
 const Button = styled.button`

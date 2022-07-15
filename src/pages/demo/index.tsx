@@ -7,6 +7,7 @@ import $http from '@/api/demo'
 import styled from 'styled-components'
 const Button = styled.button`
   background-color: aliceblue;
+  font-size: 16px;
 `
 
 export function Demo() {
@@ -23,7 +24,11 @@ export function Demo() {
   return (
     <div>
       <h3>demo页面</h3>
-      <h2 onClick={handleClick}>点击体验Recoil状态管理{count}</h2>
+
+      <div>
+        <Button onClick={handleClick}>点击体验Recoil状态管理{count}</Button>
+      </div>
+
       <h3>数字翻倍：{doublecount}</h3>
       <div>
         <Button>styled-component使用示例</Button>

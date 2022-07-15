@@ -2,9 +2,9 @@ import { GET } from './request'
 
 const musicRankingsDetails = () => {
   return GET({
-    url: '/musicRankingsDetails',
+    url: '/myip/index.php?',
     params: {
-      type: 1,
+      aa1: 'json',
     },
   })
 }

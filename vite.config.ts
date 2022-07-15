@@ -5,11 +5,18 @@ import path from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: './',
+  envDir: './env/',
   server: {
-    // host: '0.0.0.0',
-    // port: 8000,
     watch: {
-      usePolling: true, // 当你zaiwindows上使用docker运行时开启
+      usePolling: true, // 当你在windows上使用docker运行时开启
+    },
+    proxy: {
+      '/api': {
+        target: 'https://v.api.aa1.cn/api',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
     },
   },
   resolve: {

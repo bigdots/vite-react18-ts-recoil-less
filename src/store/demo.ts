@@ -30,6 +30,6 @@ const currentUserNameQuery = selector({
 })
 
 //请求函数
-function myDBQuery(data) {
+function myDBQuery(data: any) {
   // 请求
 }

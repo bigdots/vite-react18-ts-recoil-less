@@ -1,6 +1,6 @@
 import { GET } from './request'
 
-const musicRankingsDetails = () => {
+const queryIp = () => {
   return GET({
     url: '/myip/index.php?',
     params: {
@@ -10,5 +10,5 @@ const musicRankingsDetails = () => {
 }
 
 export default {
-  musicRankingsDetails,
+  queryIp,
 }

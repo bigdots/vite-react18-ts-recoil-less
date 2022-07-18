@@ -10,7 +10,9 @@ function App() {
 
   return (
     <div className="App">
-      <header>单页面应用公共部分</header>
+      <header>
+        <h1>单页面应用公共部分</h1>
+      </header>
       {/* 路由 */}
       <BrowserRouter>
         <Routers />
